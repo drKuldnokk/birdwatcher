@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="Cancel"  defaultHref="/list-of-observations"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Create new observation</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form #form="ngForm" (ngSubmit)="createObservation()">
+    <ion-list lines="full" class="ion-no-margin ion-no-padding">
+      <ion-item>
+        <ion-label position="stacked">Species <ion-text color="danger">*</ion-text></ion-label>
+        <ion-input required type="text" [(ngModel)]="observation.species" name="species"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Rarity</ion-label>
+        <ion-select interface="popover" [(ngModel)]="observation.rarity" name="rarity">
+          <ion-select-option value="common">common</ion-select-option>
+          <ion-select-option value="rare">rare</ion-select-option>
+          <ion-select-option value="extremely_rare">extremely rare</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Notes</ion-label>
+        <ion-textarea type="text" [(ngModel)]="observation.notes" name="notes"></ion-textarea>
+      </ion-item>
+    </ion-list>
+    <div class="ion-padding">
+      <ion-button expand="block" type="submit" class="ion-no-margin">Create</ion-button>
+    </div>
+  </form>
+</ion-content>

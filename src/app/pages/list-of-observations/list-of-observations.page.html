@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      List of observations
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+    <ion-item button *ngFor="let observation of observations"
+      [routerLink]="['/observation-detail', observation.uuid]"
+      routerDirection="forward">
+      <ion-label>
+        <div><h1><b>{{observation.species}}</b></h1></div>
+        <ion-text color="medium" class="item-note">{{observation.notes}}</ion-text>
+        <div><ion-text class="right" color="medium"><i>{{observation.timestamp}}</i></ion-text></div>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+    <ion-fab-button routerLink="/create-observation" routerDirection="root">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

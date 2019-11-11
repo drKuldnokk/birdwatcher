@@ -1,0 +1,26 @@
+<ion-header>
+ <ion-toolbar>
+   <ion-buttons slot="start">
+     <ion-back-button defaultHref="/list-of-observations"></ion-back-button>
+   </ion-buttons>
+   <ion-title>Observation details</ion-title>
+ </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let observation of observations">
+    <ion-card-header>
+      <ion-card-title>{{observation.species}}</ion-card-title>
+    </ion-card-header>
+
+    <ion-item>
+      <ion-label>Rarity: {{observation.rarity}}</ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Timestamp: {{observation.timestamp}}</ion-label>
+    </ion-item>
+
+    <ion-card-content>{{observation.notes}}</ion-card-content>
+  </ion-card>
+</ion-content>
