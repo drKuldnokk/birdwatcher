@@ -7,11 +7,12 @@ This is an app to record observations when birdwatching. It allows to save infor
 The chosen technology is ionic + angular. 
 An iphone7 with Ionic DevApp installed was used while developing the app.
 Karma was used for unit-testing.
-
-node v12.13.0
-npm v6.12.1
-ionic v5.4.5
-Karma version: 2.0.5
+<br />
+<br />
+node v12.13.0<br />
+npm v6.12.1<br />
+ionic v5.4.5<br />
+Karma version: 2.0.5<br />
 
 ## Installation
 
